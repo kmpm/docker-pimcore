@@ -1,4 +1,4 @@
-SUBDIRS := $(wildcard */.)
+SUBDIRS := php php-pimcore nginx-pimcore5
 TOPTARGETS := build clean publish
 
 $(TOPTARGETS): $(SUBDIRS)

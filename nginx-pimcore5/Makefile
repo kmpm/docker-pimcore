@@ -1,5 +1,10 @@
 
 
+SUBDIRS := stable
+TOPTARGETS := build clean publish
 
-build:
-	echo "implement me"
+$(TOPTARGETS): $(SUBDIRS)
+$(SUBDIRS):
+	$(MAKE) -C $@ $(MAKECMDGOALS)
+
+.PHONY: $(TOPTARGETS) $(SUBDIRS)
